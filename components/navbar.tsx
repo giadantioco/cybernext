@@ -11,16 +11,17 @@ interface MenuItem {
 
 const menuList: MenuItem[] = [
   {
-    name: labels.navProfile,
-    path: "/profile",
+    name: labels.navHome,
+    path: "/",
   },
   {
     name: labels.navCreate,
     path: "/create",
   },
+
   {
-    name: labels.navHome,
-    path: "/",
+    name: labels.navProfile,
+    path: "/profile",
   },
 ];
 
