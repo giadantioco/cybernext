@@ -67,7 +67,7 @@ const ProductList: FC<ProductListProps> = ({
                   {product.isbn}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2 flex gap-2">
-                  <Link
+                  {/* <Link
                     href={`/edit/${product.id}`}
                     className="inline-block rounded bg-green-600 px-4 py-2 text-xs font-medium text-white hover:bg-green-700"
                   >
@@ -89,7 +89,7 @@ const ProductList: FC<ProductListProps> = ({
                   >
                     {labels.productTableBtnDelete}
                     <i className="fa-solid fa-trash-can ml-2"></i>
-                  </button>
+                  </button> */}
                 </td>
               </tr>
             ))}
