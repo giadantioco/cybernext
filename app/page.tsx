@@ -1,28 +1,28 @@
+import { getProduct } from "@/action/get-product";
+import { getProducts } from "@/action/get-products";
 import Navbar from "@/components/navbar";
-import { IProduct } from "@/model/product";
-
-const getProduct = async (): Promise<IProduct> => {
-  try {
-    const response = await fetch(
-      "https://api.escuelajs.co/api/v1/products/220"
-    );
-
-    const data = await response.json();
-
-    return data;
-  } catch (e: any) {
-    throw Error(e.message);
-  }
-};
 
 export default async function HomePage() {
   const product = await getProduct();
-  console.log(product);
+  const products = await getProducts();
+  console.log(products);
 
   return (
     <main>
       <Navbar></Navbar>
-      <h1>Ciao {product.title}</h1>
+      <h1>
+        Ciao, dovrei renderizzare il tutolo del prodotto {product.id}:{" "}
+        {product.title}
+      </h1>
+      {/* <img src={product.image} alt="" /> NON VA!! */}
+      {products.map((product) => {
+        return (
+          <li key={product.id}>
+            {" "}
+            id: {product.id} title: {product.title}
+          </li>
+        );
+      })}
     </main>
   );
 }

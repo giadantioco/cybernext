@@ -13,6 +13,7 @@ function Loading() {
           via GIPHY
         </a>
       </p> */}
+      {/* NON FUNZIONA!!! */}
       loading
     </div>
   );
