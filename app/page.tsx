@@ -15,11 +15,13 @@ export interface ICategory {
   image: string;
 }
 
-const getPrducts = async () => {
+const getProduct = async (): Promise<IProduct> => {
   try {
-    const response = await fetch("https://api.escuelajs.co/api/v1/products/1");
+    const response = await fetch(
+      "https://api.escuelajs.co/api/v1/products/220"
+    );
 
-    const data: Promise<IProduct> = await response.json();
+    const data = await response.json();
 
     return data;
   } catch (e: any) {
@@ -28,13 +30,13 @@ const getPrducts = async () => {
 };
 
 export default async function HomePage() {
-  const product = await getPrducts();
+  const product = await getProduct();
   console.log(product);
 
   return (
     <main>
       <Navbar></Navbar>
-      <h1>Ciao Sono la home</h1>
+      <h1>Ciao {product.title}</h1>
     </main>
   );
 }
