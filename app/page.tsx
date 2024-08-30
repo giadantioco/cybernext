@@ -1,5 +1,6 @@
 import { getProduct } from "@/action/get-product";
 import { getProducts } from "@/action/get-products";
+import Button from "@/components/Button";
 import Navbar from "@/components/navbar";
 
 export default async function HomePage() {
@@ -19,7 +20,7 @@ export default async function HomePage() {
         return (
           <li key={product.id}>
             {" "}
-            id: {product.id} title: {product.title}
+            id: {product.id} title: {product.title} <Button></Button>
           </li>
         );
       })}
