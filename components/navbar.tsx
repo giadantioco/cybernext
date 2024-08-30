@@ -11,7 +11,7 @@ interface MenuItem {
 
 const menuList: MenuItem[] = [
   {
-    name: labels.navHome,
+    name: labels.navProductList,
     path: "/",
   },
   {

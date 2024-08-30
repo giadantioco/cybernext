@@ -1,29 +1,17 @@
 export const labels = {
-  // client product object
-  productTableItem: "ITEM",
-  productTableEmpty: "",
-  productTableCategory: "CATEGORY",
-  productTableQuantity: "QUANTITY",
-  productTableIsbn: "ISBN",
-  productTableBtnView: "View",
-  productTableBtnEdit: "Edit",
-  productTableBtnDelete: "Delete",
-  // title in home
-  productList: "Product List",
   // navbar content
   logoTitle: "CYBERNEST",
-  navHome: "Product List",
-  navProductDetail: "Product Detail",
+  navProductList: "Product List",
   navCreate: "Add Product",
   navProfile: "User Profile",
-
-  // filter title and searchbar
-  filterItem: "Filter Item",
-  filterByItem: "Filter by item",
-  // loading message
-  isLoading: "Is loading",
-  // error message
-  errorUhoh: "Uh-oh!",
-  // create page
-  createInsertNewItem: "Insert new item",
+  // Home Title
+  productList: "Product List",
+  // Button text
+  btnClick: "Click me!",
+  //Table content
+  tableId: "ID",
+  tableTitle: "Title",
+  tableCategory: "Category",
+  tablePrice: "Price",
+  tableAction: "Action",
 };
