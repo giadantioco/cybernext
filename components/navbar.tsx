@@ -25,7 +25,7 @@ const menuList: MenuItem[] = [
   },
 ];
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const pathname = usePathname();
   return (
     <nav className="flex items-center justify-between py-2 px-4 bg-petrol font-syne text-white">
