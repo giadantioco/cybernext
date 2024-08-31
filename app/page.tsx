@@ -16,11 +16,13 @@ export default async function HomePage() {
       <h1 className="text-4xl font-bold text-center py-8">
         {labels.productList}
       </h1>
-      {/* <img src={product.image} alt="" /> NON VA!! */}
       <div className="overflow-x-auto px-16">
         <table className="min-w-full bg-white border border-gray-200">
           <thead>
             <tr className="bg-gray-100">
+              <th className="px-4 py-2 border-b text-left">
+                {labels.tableImg}
+              </th>
               <th className="px-4 py-2 border-b text-left">{labels.tableId}</th>
               <th className="px-4 py-2 border-b text-left">
                 {labels.tableTitle}
@@ -39,12 +41,19 @@ export default async function HomePage() {
           <tbody>
             {products.map((product) => (
               <tr key={product.id} className="hover:bg-gray-50">
+                <td className="px-4 py-2 border-b">
+                  <img
+                    src={product.images[0]}
+                    alt={product.title}
+                    className="w-12 h-12 object-cover"
+                  />
+                </td>
                 <td className="px-4 py-2 border-b">{product.id}</td>
                 <td className="px-4 py-2 border-b">{product.title}</td>
                 <td className="px-4 py-2 border-b">{product.category.name}</td>
                 <td className="px-4 py-2 border-b">{product.price} €</td>
                 <td className="px-4 py-2 border-b">
-                  <Button />
+                  <Button product={product} />
                 </td>
               </tr>
             ))}
