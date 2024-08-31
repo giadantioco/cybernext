@@ -6,12 +6,13 @@ export const labels = {
   navProfile: "User Profile",
   // Home Title
   productList: "Product List",
-  // Button text
-  btnClick: "Click me!",
   //Table content
+  tableImg: "Image",
   tableId: "ID",
   tableTitle: "Title",
   tableCategory: "Category",
   tablePrice: "Price",
   tableAction: "Action",
+  // Button text
+  btnView: "View",
 };
