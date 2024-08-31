@@ -1,14 +1,15 @@
 "use client";
 
 import { labels } from "@/data/labels";
+import { IProduct } from "@/model/product";
 
-function Button() {
+function Button({ product }: { product: IProduct }) {
   return (
     <button
-      onClick={() => console.log("pippo")}
+      onClick={() => console.log(product.title)}
       className="inline-block rounded bg-purple-600 px-4 py-2 text-xs font-medium text-white hover:bg-purple-700"
     >
-      {labels.btnClick}
+      {labels.btnView}
     </button>
   );
 }
