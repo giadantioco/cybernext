@@ -1,4 +1,3 @@
-import { getProduct } from "@/action/get-product";
 import { getProducts } from "@/action/get-products";
 import { labels } from "../data/labels";
 import Button from "@/components/Button";
@@ -6,13 +5,12 @@ import Button from "@/components/Button";
 import Navbar from "@/components/navbar";
 
 export default async function HomePage() {
-  const product = await getProduct();
   const products = await getProducts();
   console.log(products);
 
   return (
     <main>
-      <Navbar></Navbar>
+      <Navbar />
       <h1 className="text-4xl font-bold text-center py-8">
         {labels.productList}
       </h1>
@@ -48,11 +46,11 @@ export default async function HomePage() {
                     className="w-12 h-12 object-cover"
                   />
                 </td>
-                <td className="px-4 py-2 border-b">{product.id}</td>
-                <td className="px-4 py-2 border-b">{product.title}</td>
-                <td className="px-4 py-2 border-b">{product.category.name}</td>
-                <td className="px-4 py-2 border-b">{product.price} €</td>
-                <td className="px-4 py-2 border-b">
+                <td className="px-2 py-2 border-b">{product.id}</td>
+                <td className="px-2 py-2 border-b">{product.title}</td>
+                <td className="px-2 py-2 border-b">{product.category.name}</td>
+                <td className="px-2 py-2 border-b">{product.price} €</td>
+                <td className="px-2 py-2 border-b">
                   <Button product={product} />
                 </td>
               </tr>

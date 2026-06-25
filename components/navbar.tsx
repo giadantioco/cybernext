@@ -16,7 +16,7 @@ const menuList: MenuItem[] = [
   },
   {
     name: labels.navCreate,
-    path: "/create",
+    path: "/create-product",
   },
 
   {

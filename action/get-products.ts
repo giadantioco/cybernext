@@ -1,13 +1,18 @@
 import { IProduct } from "@/model/product";
 
 export const getProducts = async (): Promise<IProduct[]> => {
-  try {
-    const response = await fetch("https://api.escuelajs.co/api/v1/products");
+  const response = await fetch(`https://api.escuelajs.co/api/v1/products/`, {
+    cache: "no-store",
+  });
+  console.log("Status:", response.status);
 
-    const data = await response.json();
-
-    return data;
-  } catch (e: any) {
-    throw Error(e.message);
+  if (!response.ok) {
+    const error = await response.json();
+    console.log("Errore api:", error);
+    throw new Error("Products not found");
   }
+
+  const data = await response.json();
+  console.log("NUMERO prodotti:", data.length);
+  return data;
 };
