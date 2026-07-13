@@ -4,7 +4,6 @@ import { useState } from "react";
 import { createProduct } from "@/action/create-product";
 import Navbar from "@/components/navbar";
 import { labels } from "@/data/labels";
-import Button from "@/components/Button";
 
 export default function CreateProduct() {
   const [form, setForm] = useState({
