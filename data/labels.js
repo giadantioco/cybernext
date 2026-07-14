@@ -4,6 +4,7 @@ export const labels = {
   navProductList: "Product List",
   navCreate: "Add Product",
   navProfile: "User Profile",
+  navEdit: "Edit Product",
 
   // Home Title
   productList: "Product List",
