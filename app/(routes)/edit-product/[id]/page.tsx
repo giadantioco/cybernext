@@ -1,6 +1,7 @@
 import { getProduct } from "@/action/get-product";
 import Navbar from "@/components/navbar";
 import { labels } from "@/data/labels";
+import EditProductForm from "./EditProductForm";
 
 type EditProductPageProps = {
   params: {
@@ -16,6 +17,7 @@ export default async function EditProductPage({
     <main>
       <Navbar />
       <h1 className="text-4xl font bold text-center py-8">{labels.navEdit}</h1>
+      <EditProductForm product={product} />
     </main>
   );
 }

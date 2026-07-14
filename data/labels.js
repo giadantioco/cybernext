@@ -33,4 +33,7 @@ export const labels = {
   // Button text
   btnView: "View",
   btnAddProduct: "Add Product",
+  btnEdit: "Edit Product",
+  btnSaveEdit: "Save Edit"
+
 };

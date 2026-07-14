@@ -15,7 +15,7 @@ export const updateProduct = async (
     {
       method: "PUT",
       headers: {
-        "Content-Type": "application.json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(product),
     },

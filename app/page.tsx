@@ -51,7 +51,7 @@ export default async function HomePage() {
                 <td className="px-2 py-2 border-b">{product.category.name}</td>
                 <td className="px-2 py-2 border-b">{product.price} €</td>
                 <td className="px-2 py-2 border-b">
-                  <Button product={product} />
+                  <Button label={labels.btnView} href={`/product-detail/${product.id}`} />
                 </td>
               </tr>
             ))}
