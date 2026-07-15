@@ -11,16 +11,15 @@ interface MenuItem {
 
 const menuList: MenuItem[] = [
   {
-    name: labels.navProductList,
+    name: labels.productList,
     path: "/",
   },
   {
-    name: labels.navCreate,
+    name: labels.addProduct,
     path: "/create-product",
   },
-
   {
-    name: labels.navProfile,
+    name: labels.profile,
     path: "/profile",
   },
 ];
@@ -29,7 +28,9 @@ const Navbar = () => {
   const pathname = usePathname();
   return (
     <nav className="flex items-center justify-between py-2 px-4 bg-petrol font-syne text-white">
-      <h1 className="font-bold text-xl">{labels.logoTitle}</h1>
+      <Link href="/">
+        <h1 className="font-bold text-xl">{labels.logoTitle}</h1>
+      </Link>
       <ul className="flex gap-4">
         {menuList.map((item, index) => (
           <li key={index}>

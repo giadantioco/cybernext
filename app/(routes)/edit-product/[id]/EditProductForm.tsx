@@ -5,6 +5,7 @@ import { IProduct } from "@/model/product";
 import { useRouter } from "next/navigation";
 import { labels } from "@/data/labels";
 import { useState } from "react";
+import SubmitButton from "@/components/SubmitButton";
 
 export default function EditProductForm({ product }: { product: IProduct }) {
   const router = useRouter();
@@ -35,15 +36,15 @@ export default function EditProductForm({ product }: { product: IProduct }) {
         price: Number(form.price),
         description: form.description,
         categoryId: Number(form.categoryId),
-        images: form.images
+        images: form.images,
       });
       router.push("/");
-      router.refresh()
+      router.refresh();
     } catch (error) {
-      console.error(error)
+      console.error(error);
       alert("Errore nella modifica del prodotto");
     }
-  }
+  };
 
   return (
     <div className="px-16 py-4">
@@ -73,7 +74,9 @@ export default function EditProductForm({ product }: { product: IProduct }) {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label className="text-sm font-semibold text-gray-600">Description</label>
+            <label className="text-sm font-semibold text-gray-600">
+              Description
+            </label>
             <textarea
               name="description"
               value={form.description}
@@ -85,7 +88,9 @@ export default function EditProductForm({ product }: { product: IProduct }) {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label className="text-sm font-semibold text-gray-600">Category ID</label>
+            <label className="text-sm font-semibold text-gray-600">
+              Category ID
+            </label>
             <input
               name="categoryId"
               type="number"
@@ -97,7 +102,9 @@ export default function EditProductForm({ product }: { product: IProduct }) {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label className="text-sm font-semibold text-gray-600">Image URL</label>
+            <label className="text-sm font-semibold text-gray-600">
+              Image URL
+            </label>
             <input
               name="images"
               type="url"
@@ -107,13 +114,7 @@ export default function EditProductForm({ product }: { product: IProduct }) {
             />
           </div>
 
-          <button
-            type="submit"
-            className="bg-petrol text-white font-syne font-bold py-2 px-6 hover:opacity-90 transition-opacity mt-2"
-          >
-            {labels.btnSaveEdit}
-          </button>
-
+          <SubmitButton label={labels.btnSaveEdit} />
         </form>
       </div>
     </div>

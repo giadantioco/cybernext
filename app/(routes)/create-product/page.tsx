@@ -4,6 +4,7 @@ import { useState } from "react";
 import { createProduct } from "@/action/create-product";
 import Navbar from "@/components/navbar";
 import { labels } from "@/data/labels";
+import SubmitButton from "@/components/SubmitButton";
 
 export default function CreateProduct() {
   const [form, setForm] = useState({
@@ -45,7 +46,7 @@ export default function CreateProduct() {
     <main>
       <Navbar />
       <h1 className="text-4xl font-bold text-center py-8">
-        {labels.navCreate}
+        {labels.titleAddform}
       </h1>
 
       <div className="px-16 py-4">
@@ -123,12 +124,7 @@ export default function CreateProduct() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="bg-petrol text-white font-syne font-bold py-2 px-6 hover:opacity-90 transition-opacity mt-2"
-            >
-              {labels.btnAddProduct}
-            </button>
+            <SubmitButton label={labels.btnAddProduct} />
           </form>
         </div>
       </div>

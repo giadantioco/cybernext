@@ -1,15 +1,16 @@
 export const labels = {
   // navbar content
-  logoTitle: "CYBERNEST",
-  navProductList: "Product List",
-  navCreate: "Add Product",
-  navProfile: "User Profile",
-  navEdit: "Edit Product",
-
-  // Home Title
+  logoTitle: "CYBERNEXT",
   productList: "Product List",
+  addProduct: "Add Product",
+  profile: "User Profile",
 
-  //Table content
+  //Titles &
+  titleProductList: "Product List",
+  titleAddform: "Add Product",
+  titleEditform: "Edit Product",
+
+  // Home Table content
   tableImg: "Image",
   tableId: "ID",
   tableTitle: "Title",
@@ -33,7 +34,7 @@ export const labels = {
   // Button text
   btnView: "View",
   btnAddProduct: "Add Product",
-  btnEdit: "Edit Product",
-  btnSaveEdit: "Save Edit"
-
+  btnEdit: "Edit",
+  btnSaveEdit: "Save Edit",
+  btnDelete: "Delete",
 };

@@ -1,8 +1,8 @@
 import { getProducts } from "@/action/get-products";
 import { labels } from "../data/labels";
-import Button from "@/components/Button";
-
 import Navbar from "@/components/navbar";
+import Button from "@/components/Button";
+import DeleteButton from "@/components/DeleteButton";
 
 export default async function HomePage() {
   const products = await getProducts();
@@ -18,22 +18,12 @@ export default async function HomePage() {
         <table className="min-w-full bg-white border border-gray-200">
           <thead>
             <tr className="bg-gray-100">
-              <th className="px-4 py-2 border-b text-left">
-                {labels.tableImg}
-              </th>
-              <th className="px-4 py-2 border-b text-left">{labels.tableId}</th>
-              <th className="px-4 py-2 border-b text-left">
-                {labels.tableTitle}
-              </th>
-              <th className="px-4 py-2 border-b text-left">
-                {labels.tableCategory}
-              </th>
-              <th className="px-4 py-2 border-b text-left">
-                {labels.tablePrice}
-              </th>
-              <th className="px-4 py-2 border-b text-left">
-                {labels.tableAction}
-              </th>
+              <th className="table-th">{labels.tableImg}</th>
+              <th className="table-th">{labels.tableId}</th>
+              <th className="table-th">{labels.tableTitle}</th>
+              <th className="table-th">{labels.tableCategory}</th>
+              <th className="table-th">{labels.tablePrice}</th>
+              <th className="table-th">{labels.tableAction}</th>
             </tr>
           </thead>
           <tbody>
@@ -46,12 +36,24 @@ export default async function HomePage() {
                     className="w-12 h-12 object-cover"
                   />
                 </td>
-                <td className="px-2 py-2 border-b">{product.id}</td>
-                <td className="px-2 py-2 border-b">{product.title}</td>
-                <td className="px-2 py-2 border-b">{product.category.name}</td>
-                <td className="px-2 py-2 border-b">{product.price} €</td>
-                <td className="px-2 py-2 border-b">
-                  <Button label={labels.btnView} href={`/product-detail/${product.id}`} />
+                <td className="table-td">{product.id}</td>
+                <td className="table-td">{product.title}</td>
+                <td className="table-td">{product.category.name}</td>
+                <td className="table-td">{product.price} €</td>
+                <td className="table-td">
+                  <div className="flex gap-2">
+                    <Button
+                      label={labels.btnView}
+                      href={`/product-detail/${product.id}`}
+                      variant="view"
+                    />
+                    <Button
+                      label={labels.btnEdit}
+                      href={`/edit-product/${product.id}`}
+                      variant="edit"
+                    />
+                    <DeleteButton id={product.id} />
+                  </div>
                 </td>
               </tr>
             ))}

@@ -2,11 +2,26 @@
 
 import Link from "next/link";
 
-function Button({ label, href }: { label: string; href: string }) {
+type ButtonVariant = "view" | "edit";
+
+const variantClasses: Record<ButtonVariant, string> = {
+  view: "bg-purple-600 hover:bg-purple-700",
+  edit: "bg-yellow-500 hover:bg-yellow/50",
+};
+
+function Button({
+  label,
+  href,
+  variant = "view",
+}: {
+  label: string;
+  href: string;
+  variant?: ButtonVariant;
+}) {
   return (
     <Link
       href={href}
-      className="inline-block rounded bg-purple-600 px-4 py-2 text-xs font-medium text-white hover:bg-purple-700"
+      className={`inline-block rounded px-4 py-2 text-xs font-medium text-white ${variantClasses[variant]}`}
     >
       {label}
     </Link>
