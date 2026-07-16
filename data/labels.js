@@ -1,14 +1,14 @@
 export const labels = {
   // navbar content
-  logoTitle: "CYBERNEXT",
+  navLogoTitle: "CYBERNEXT",
   productList: "Product List",
-  addProduct: "Add Product",
-  profile: "User Profile",
+  navAddProduct: "Add Product",
+  navLogin: "User Profile",
 
-  //Titles &
-  titleProductList: "Product List",
+  //Titles 
   titleAddform: "Add Product",
   titleEditform: "Edit Product",
+  titleLogin: "Login",
 
   // Home Table content
   tableImg: "Image",
@@ -30,6 +30,10 @@ export const labels = {
   // product-detail
   detailPrice: "Price",
   detailCategory: "Category",
+
+  // login 
+  loginEmail: "Email",
+  loginPw: "Password",
 
   // Button text
   btnView: "View",

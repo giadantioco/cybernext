@@ -15,12 +15,12 @@ const menuList: MenuItem[] = [
     path: "/",
   },
   {
-    name: labels.addProduct,
+    name: labels.navAddProduct,
     path: "/create-product",
   },
   {
-    name: labels.profile,
-    path: "/profile",
+    name: labels.navLogin,
+    path: "/login",
   },
 ];
 
@@ -29,16 +29,15 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-2 px-4 bg-petrol font-syne text-white">
       <Link href="/">
-        <h1 className="font-bold text-xl">{labels.logoTitle}</h1>
+        <h1 className="font-bold text-xl">{labels.navLogoTitle}</h1>
       </Link>
       <ul className="flex gap-4">
         {menuList.map((item, index) => (
           <li key={index}>
             <Link
               href={item.path}
-              className={`flex items-center ${
-                pathname === item.path ? "font-bold underline" : ""
-              }`}
+              className={`flex items-center ${pathname === item.path ? "font-bold underline" : ""
+                }`}
             >
               {item.name}
             </Link>
