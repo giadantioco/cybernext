@@ -5,7 +5,7 @@ export const labels = {
   navAddProduct: "Add Product",
   navLogin: "User Profile",
 
-  //Titles 
+  //Titles
   titleAddform: "Add Product",
   titleEditform: "Edit Product",
   titleLogin: "Login",
@@ -31,7 +31,7 @@ export const labels = {
   detailPrice: "Price",
   detailCategory: "Category",
 
-  // login 
+  // login
   loginEmail: "Email",
   loginPw: "Password",
 
@@ -41,4 +41,5 @@ export const labels = {
   btnEdit: "Edit",
   btnSaveEdit: "Save Edit",
   btnDelete: "Delete",
+  btnLogin: "Login",
 };
