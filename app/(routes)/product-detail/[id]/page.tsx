@@ -2,6 +2,7 @@ import { getProduct } from "@/action/get-product";
 import Navbar from "@/components/navbar";
 import Button from "@/components/Button";
 import { labels } from "@/data/labels";
+import { notFound } from "next/navigation";
 
 type ProductDetailPageProps = {
   params: {
@@ -13,7 +14,7 @@ export default async function ProductDetailPage({
   params,
 }: ProductDetailPageProps) {
   const product = await getProduct(Number(params.id));
-
+  if (!product) notFound();
   return (
     <main>
       <Navbar />

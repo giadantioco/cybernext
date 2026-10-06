@@ -2,6 +2,7 @@ import { getProduct } from "@/action/get-product";
 import Navbar from "@/components/navbar";
 import { labels } from "@/data/labels";
 import EditProductForm from "./EditProductForm";
+import { notFound } from "next/navigation";
 
 type EditProductPageProps = {
   params: {
@@ -13,6 +14,7 @@ export default async function EditProductPage({
   params,
 }: EditProductPageProps) {
   const product = await getProduct(Number(params.id));
+  if (!product) notFound();
   return (
     <main>
       <Navbar />
