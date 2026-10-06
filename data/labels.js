@@ -25,6 +25,7 @@ export const labels = {
   formLabelCategoryId: "Category ID",
   formLabelImage: "Image URL",
   formPlaceholderTitle: "Product title",
+  formPlaceholderDescription: "Product description",
   formPlaceholderImage: "https://...",
 
   // product-detail

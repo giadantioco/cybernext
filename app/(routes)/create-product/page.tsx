@@ -54,11 +54,11 @@ export default function CreateProduct() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="flex flex-col gap-1">
               <label className="text-sm font-semibold text-gray-600">
-                Title
+                {labels.formLabelTitle}
               </label>
               <input
                 name="title"
-                placeholder="Product title"
+                placeholder={labels.formPlaceholderTitle}
                 value={form.title}
                 onChange={handleChange}
                 required
@@ -68,7 +68,7 @@ export default function CreateProduct() {
 
             <div className="flex flex-col gap-1">
               <label className="text-sm font-semibold text-gray-600">
-                Price
+                {labels.formLabelPrice}
               </label>
               <input
                 name="price"
@@ -83,11 +83,11 @@ export default function CreateProduct() {
 
             <div className="flex flex-col gap-1">
               <label className="text-sm font-semibold text-gray-600">
-                Description
+                {labels.formLabelDescription}
               </label>
               <textarea
                 name="description"
-                placeholder="Product description"
+                placeholder={labels.formPlaceholderDescription}
                 value={form.description}
                 onChange={handleChange}
                 required
@@ -98,7 +98,7 @@ export default function CreateProduct() {
 
             <div className="flex flex-col gap-1">
               <label className="text-sm font-semibold text-gray-600">
-                Category ID
+                {labels.formLabelCategoryId}
               </label>
               <input
                 name="categoryId"
@@ -113,11 +113,11 @@ export default function CreateProduct() {
 
             <div className="flex flex-col gap-1">
               <label className="text-sm font-semibold text-gray-600">
-                Image URL
+                {labels.formLabelImage}
               </label>
               <input
                 name="images"
-                placeholder="https://..."
+                placeholder={labels.formPlaceholderImage}
                 value={form.images[0]}
                 onChange={(e) => setForm({ ...form, images: [e.target.value] })}
                 className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400"

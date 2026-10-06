@@ -24,7 +24,7 @@ export default function DeleteButton({ id }: { id: number }) {
       onClick={handleDelete}
       className="inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-red-700"
     >
-      Delete
+      {labels.btnDelete}
     </button>
   );
 }
