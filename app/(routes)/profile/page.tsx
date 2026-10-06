@@ -15,9 +15,11 @@ export default async function ProfilePage() {
       Authorization: `Bearer ${token}`,
     },
   });
+  if (!response.ok) {
+    redirect("/login");
+  }
 
   const user = await response.json();
-  console.log("oggetto user:", user);
 
   return (
     <main>

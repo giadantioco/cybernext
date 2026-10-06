@@ -25,6 +25,7 @@ export const labels = {
   formLabelCategoryId: "Category ID",
   formLabelImage: "Image URL",
   formPlaceholderTitle: "Product title",
+  formPlaceholderDescription: "Product description",
   formPlaceholderImage: "https://...",
 
   // product-detail
@@ -42,4 +43,12 @@ export const labels = {
   btnSaveEdit: "Save Edit",
   btnDelete: "Delete",
   btnLogin: "Login",
+
+  // messages
+  msgCreateSuccess: (title) => `Product "${title}" successfully created!`,
+  msgCreateError: "Error while creating the product",
+  msgEditError: "Error while updating the product",
+  msgDeleteConfirm: "Are you sure you want to delete this product?",
+  msgDeleteError: "Error while deleting the product",
+  msgLoginError: "Invalid email or password",
 };

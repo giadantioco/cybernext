@@ -22,8 +22,6 @@ export const updateProduct = async (
   );
 
   if (!response.ok) {
-    const error = await response.json();
-    console.log("API error:", error);
     throw new Error("Product not updated");
   }
   return response.json();

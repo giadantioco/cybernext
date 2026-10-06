@@ -16,8 +16,6 @@ export const createProduct = async (product: {
   });
 
   if (!response.ok) {
-    const error = await response.json();
-    console.log("API error:", error); // ← così vedi esattamente cosa dice l'API
     throw new Error("Product not created");
   }
 

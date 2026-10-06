@@ -42,7 +42,7 @@ export default function EditProductForm({ product }: { product: IProduct }) {
       router.refresh();
     } catch (error) {
       console.error(error);
-      alert("Errore nella modifica del prodotto");
+      alert(labels.msgEditError);
     }
   };
 

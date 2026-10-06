@@ -6,7 +6,6 @@ import DeleteButton from "@/components/DeleteButton";
 
 export default async function HomePage() {
   const products = await getProducts();
-  console.log(products);
 
   return (
     <main>
