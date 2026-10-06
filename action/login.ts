@@ -6,7 +6,6 @@ export const login = async (email: string, password: string) => {
     },
     body: JSON.stringify({ email, password }),
   });
-  console.log("Status:", response.status);
 
   if (!response.ok) {
     throw new Error("Login failed");
