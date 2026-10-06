@@ -6,7 +6,7 @@ type ButtonVariant = "view" | "edit";
 
 const variantClasses: Record<ButtonVariant, string> = {
   view: "bg-purple-600 hover:bg-purple-700",
-  edit: "bg-yellow-500 hover:bg-yellow/50",
+  edit: "bg-yellow-500 hover:bg-yellow-500",
 };
 
 function Button({
