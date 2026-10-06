@@ -31,7 +31,7 @@ export default function LoginPage() {
       router.push("/profile");
       router.refresh();
     } catch (error) {
-      setError("Email o password errati");
+      setError("Wrong email or password");
     }
   };
   return (

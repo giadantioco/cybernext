@@ -1,3 +1,5 @@
+import { labels } from "@/data/labels";
+
 export const login = async (email: string, password: string) => {
   const response = await fetch("https://api.escuelajs.co/api/v1/auth/login", {
     method: "POST",
@@ -8,7 +10,7 @@ export const login = async (email: string, password: string) => {
   });
 
   if (!response.ok) {
-    throw new Error("Login failed");
+    throw new Error(labels.msgLoginError);
   }
   return response.json();
 };

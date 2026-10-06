@@ -33,12 +33,12 @@ export default function CreateProduct() {
         categoryId: Number(form.categoryId),
         images: [form.images[0]],
       });
-      alert(`Prodotto "${newProduct.title}" creato con successo!`);
+      alert(labels.msgCreateSuccess(newProduct.title));
       router.push("/");
       router.refresh();
     } catch (error) {
       console.error(error);
-      alert("Errore nella creazione del prodotto");
+      alert(labels.msgCreateError);
     }
   };
 
