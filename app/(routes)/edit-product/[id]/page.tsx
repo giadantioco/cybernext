@@ -5,14 +5,13 @@ import EditProductForm from "./EditProductForm";
 import { notFound } from "next/navigation";
 
 type EditProductPageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export default async function EditProductPage({
-  params,
-}: EditProductPageProps) {
+export default async function EditProductPage(props: EditProductPageProps) {
+  const params = await props.params;
   const product = await getProduct(Number(params.id));
   if (!product) notFound();
   return (

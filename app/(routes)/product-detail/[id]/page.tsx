@@ -5,14 +5,13 @@ import { labels } from "@/data/labels";
 import { notFound } from "next/navigation";
 
 type ProductDetailPageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export default async function ProductDetailPage({
-  params,
-}: ProductDetailPageProps) {
+export default async function ProductDetailPage(props: ProductDetailPageProps) {
+  const params = await props.params;
   const product = await getProduct(Number(params.id));
   if (!product) notFound();
   return (
