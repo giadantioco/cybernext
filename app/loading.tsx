@@ -16,19 +16,19 @@ function Loading() {
             {Array.from({ length: 20 }).map((_, index) => (
               <tr key={index} className="animate-pulse">
                 <td className="px-4 py-2 border-b">
-                  <div className="h-4 bg-gray-300 rounded w-12"></div>
+                  <div className="h-4 bg-gray-300 rounded-sm w-12"></div>
                 </td>
                 <td className="px-4 py-2 border-b">
-                  <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+                  <div className="h-4 bg-gray-300 rounded-sm w-3/4"></div>
                 </td>
                 <td className="px-4 py-2 border-b">
-                  <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+                  <div className="h-4 bg-gray-300 rounded-sm w-1/2"></div>
                 </td>
                 <td className="px-4 py-2 border-b">
-                  <div className="h-4 bg-gray-300 rounded w-16"></div>
+                  <div className="h-4 bg-gray-300 rounded-sm w-16"></div>
                 </td>
                 <td className="px-4 py-2 border-b">
-                  <div className="h-8 bg-gray-300 rounded w-24"></div>
+                  <div className="h-8 bg-gray-300 rounded-sm w-24"></div>
                 </td>
               </tr>
             ))}

@@ -54,7 +54,7 @@ export default function LoginPage() {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400"
+                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -68,7 +68,7 @@ export default function LoginPage() {
                 value={form.password}
                 onChange={handleChange}
                 required
-                className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400"
+                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
 

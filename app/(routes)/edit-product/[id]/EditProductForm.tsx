@@ -57,7 +57,7 @@ export default function EditProductForm({ product }: { product: IProduct }) {
               value={form.title}
               onChange={handleChange}
               required
-              className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400"
+              className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
             />
           </div>
 
@@ -69,7 +69,7 @@ export default function EditProductForm({ product }: { product: IProduct }) {
               value={form.price}
               onChange={handleChange}
               required
-              className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400"
+              className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
             />
           </div>
 
@@ -83,7 +83,7 @@ export default function EditProductForm({ product }: { product: IProduct }) {
               onChange={handleChange}
               required
               rows={4}
-              className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400 resize-none"
+              className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400 resize-none"
             />
           </div>
 
@@ -97,7 +97,7 @@ export default function EditProductForm({ product }: { product: IProduct }) {
               value={form.categoryId}
               onChange={handleChange}
               required
-              className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400"
+              className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
             />
           </div>
 
@@ -110,7 +110,7 @@ export default function EditProductForm({ product }: { product: IProduct }) {
               type="url"
               value={form.images[0]}
               onChange={handleChange}
-              className="border border-gray-200 px-4 py-2 focus:outline-none focus:border-gray-400"
+              className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
             />
           </div>
 

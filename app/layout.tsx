@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-syne-next",
 });
 
 export const metadata: Metadata = {
