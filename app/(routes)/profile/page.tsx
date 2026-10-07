@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import Navbar from "@/components/navbar";
 
 export default async function ProfilePage() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const token = cookieStore.get("access_token")?.value;
 
   if (!token) {
