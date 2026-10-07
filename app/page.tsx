@@ -1,8 +1,8 @@
 import { getProducts } from "@/action/get-products";
 import { labels } from "../data/labels";
 import Navbar from "@/components/navbar";
-import Button from "@/components/Button";
-import DeleteButton from "@/components/DeleteButton";
+import ProductActions from "@/components/ProductActions";
+import ProductCard from "@/components/ProductCard";
 
 export default async function HomePage() {
   const products = await getProducts();
@@ -13,7 +13,12 @@ export default async function HomePage() {
       <h1 className="text-4xl font-bold text-center py-8">
         {labels.productList}
       </h1>
-      <div className="overflow-x-auto px-16">
+      <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 pb-8">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+      <div className="hidden md:block overflow-x-auto px-16">
         <table className="min-w-full bg-white border border-gray-200">
           <thead>
             <tr className="bg-gray-100">
@@ -40,19 +45,7 @@ export default async function HomePage() {
                 <td className="table-td">{product.category.name}</td>
                 <td className="table-td">{product.price} €</td>
                 <td className="table-td">
-                  <div className="flex gap-2">
-                    <Button
-                      label={labels.btnView}
-                      href={`/product-detail/${product.id}`}
-                      variant="view"
-                    />
-                    <Button
-                      label={labels.btnEdit}
-                      href={`/edit-product/${product.id}`}
-                      variant="edit"
-                    />
-                    <DeleteButton id={product.id} />
-                  </div>
+                  <ProductActions id={product.id} />
                 </td>
               </tr>
             ))}
