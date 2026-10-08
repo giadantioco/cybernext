@@ -4,7 +4,12 @@ import { useRouter } from "next/navigation";
 import { deleteProduct } from "@/action/delete-product";
 import { labels } from "@/data/labels";
 
-export default function DeleteButton({ id }: { id: number }) {
+interface DeleteButtonProps {
+  id: number;
+  redirectTo?: string;
+}
+
+export default function DeleteButton({ id, redirectTo }: DeleteButtonProps) {
   const router = useRouter();
 
   const handleDelete = async () => {
@@ -12,7 +17,11 @@ export default function DeleteButton({ id }: { id: number }) {
 
     try {
       await deleteProduct(id);
-      router.refresh();
+      if (redirectTo) {
+        router.push(redirectTo);
+      } else {
+        router.refresh();
+      }
     } catch (error) {
       console.error(error);
       alert(labels.msgDeleteError);
