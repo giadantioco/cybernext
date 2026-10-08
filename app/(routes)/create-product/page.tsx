@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createProduct } from "@/action/create-product";
-import Navbar from "@/components/navbar";
+import Header from "@/components/Header";
 import { labels } from "@/data/labels";
 import SubmitButton from "@/components/SubmitButton";
 
@@ -44,7 +44,7 @@ export default function CreateProduct() {
 
   return (
     <main>
-      <Navbar />
+      <Header />
       <h1 className="text-4xl font-bold text-center py-8">
         {labels.titleAddform}
       </h1>

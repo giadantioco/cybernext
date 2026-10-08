@@ -1,5 +1,5 @@
 import { getProduct } from "@/action/get-product";
-import Navbar from "@/components/navbar";
+import Header from "@/components/Header";
 import Button from "@/components/Button";
 import { labels } from "@/data/labels";
 import { notFound } from "next/navigation";
@@ -16,7 +16,7 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
   if (!product) notFound();
   return (
     <main>
-      <Navbar />
+      <Header />
       <section className="px-16 py-8">
         <h1 className="text-4xl font-bold">{product.title}</h1>
         <Button label={labels.btnEdit} href={`/edit-product/${product.id}`} />

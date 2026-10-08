@@ -1,6 +1,6 @@
 import { getProducts } from "@/action/get-products";
 import { labels } from "../data/labels";
-import Navbar from "@/components/navbar";
+import Header from "@/components/Header";
 import ProductActions from "@/components/ProductActions";
 import ProductCard from "@/components/ProductCard";
 
@@ -9,7 +9,7 @@ export default async function HomePage() {
 
   return (
     <main>
-      <Navbar />
+      <Header />
       <h1 className="text-4xl font-bold text-center py-8">
         {labels.productList}
       </h1>
