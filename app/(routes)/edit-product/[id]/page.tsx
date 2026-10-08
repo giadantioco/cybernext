@@ -1,5 +1,5 @@
 import { getProduct } from "@/action/get-product";
-import Navbar from "@/components/navbar";
+import Header from "@/components/Header";
 import { labels } from "@/data/labels";
 import EditProductForm from "./EditProductForm";
 import { notFound } from "next/navigation";
@@ -16,7 +16,7 @@ export default async function EditProductPage(props: EditProductPageProps) {
   if (!product) notFound();
   return (
     <main>
-      <Navbar />
+      <Header />
       <h1 className="text-4xl font-bold text-center py-8">
         {labels.titleEditform}
       </h1>

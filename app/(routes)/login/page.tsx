@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/action/login";
-import Navbar from "@/components/navbar";
+import Header from "@/components/Header";
 import { labels } from "@/data/labels";
 import SubmitButton from "@/components/SubmitButton";
 
@@ -36,7 +36,7 @@ export default function LoginPage() {
   };
   return (
     <main>
-      <Navbar />
+      <Header />
       <h1 className="text-4xl font-bold text-center py-8">
         {labels.titleLogin}
       </h1>

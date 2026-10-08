@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import Navbar from "@/components/navbar";
+import Header from "@/components/Header";
 
 export default async function ProfilePage() {
   const cookieStore = await cookies();
@@ -23,7 +23,7 @@ export default async function ProfilePage() {
 
   return (
     <main>
-      <Navbar />
+      <Header />
       <section className="px-16 py-8">
         <h1 className="text-4xl font-bold py-8">User Profile</h1>
         <div className="bg-white border border-gray-200 p-8 max-w-md">
