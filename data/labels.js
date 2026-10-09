@@ -54,7 +54,7 @@ export const labels = {
   msgLoginError: "Invalid email or password",
 
   //404
-  notFoundTitle: "Page not found",
-  notFoundText: "This page doesn't exist or the product has been removed.",
-  btnBackHome: "Back to products",
+  notFoundTitle: "Title not Found",
+  notFoundText: "Text not Found",
+  btnBackHome: "Back Home",
 };

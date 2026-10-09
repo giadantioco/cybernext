@@ -1,8 +1,16 @@
 import { getProduct } from "@/action/get-product";
 import Header from "@/components/Header";
 import ProductActions from "@/components/ProductActions";
-import { labels } from "@/data/labels";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export async function generateMetadata(
+  props: ProductDetailPageProps,
+): Promise<Metadata> {
+  const params = await props.params;
+  const product = await getProduct(Number(params.id));
+  return { title: product?.title ?? "Product not found" };
+}
 
 interface ProductDetailPageProps {
   params: Promise<{
