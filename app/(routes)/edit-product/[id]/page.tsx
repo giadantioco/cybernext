@@ -3,6 +3,11 @@ import Header from "@/components/Header";
 import { labels } from "@/data/labels";
 import EditProductForm from "./EditProductForm";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Edit Product",
+};
 
 type EditProductPageProps = {
   params: Promise<{
