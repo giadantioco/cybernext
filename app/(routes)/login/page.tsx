@@ -41,10 +41,10 @@ export default function LoginPage() {
         {labels.titleLogin}
       </h1>
       <div className="px-16 py-4">
-        <div className="bg-white border border-gray-200 p-8 max-w-md mx-auto">
+        <div className="bg-white border rounded-2xl border-gray-200 p-8 max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-semibold text-gray-600">
+              <label className="font-syne text-sm font-semibold text-gray-600">
                 {labels.loginEmail}
               </label>
               <input
@@ -54,11 +54,11 @@ export default function LoginPage() {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
+                className="border rounded-2xl border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-semibold text-gray-600">
+              <label className="font-syne text-sm font-semibold text-gray-600">
                 {labels.loginPw}
               </label>
               <input
@@ -68,7 +68,7 @@ export default function LoginPage() {
                 value={form.password}
                 onChange={handleChange}
                 required
-                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
+                className="border rounded-2xl border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
 
