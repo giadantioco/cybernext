@@ -44,6 +44,7 @@ export const labels = {
   btnSaveEdit: "Save Edit",
   btnDelete: "Delete",
   btnLogin: "Login",
+  btnLogout: "Logout",
 
   // messages
   msgCreateSuccess: (title) => `Product "${title}" successfully created!`,
