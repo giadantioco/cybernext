@@ -50,7 +50,7 @@ export default function CreateProduct() {
       </h1>
 
       <div className="px-16 py-4">
-        <div className="bg-white border border-gray-200 p-8 max-w-2xl mx-auto">
+        <div className="bg-white border rounded-2xl border-gray-200 p-8 max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="flex flex-col gap-1">
               <label className="text-sm font-semibold text-gray-600">
@@ -62,7 +62,7 @@ export default function CreateProduct() {
                 value={form.title}
                 onChange={handleChange}
                 required
-                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
+                className="border rounded-2xl border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
 
@@ -77,7 +77,7 @@ export default function CreateProduct() {
                 value={form.price}
                 onChange={handleChange}
                 required
-                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
+                className="border rounded-2xl border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
 
@@ -92,7 +92,7 @@ export default function CreateProduct() {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400 resize-none"
+                className="border rounded-2xl border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400 resize-none"
               />
             </div>
 
@@ -107,7 +107,7 @@ export default function CreateProduct() {
                 value={form.categoryId}
                 onChange={handleChange}
                 required
-                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
+                className="border rounded-2xl border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
 
@@ -120,7 +120,7 @@ export default function CreateProduct() {
                 placeholder={labels.formPlaceholderImage}
                 value={form.images[0]}
                 onChange={(e) => setForm({ ...form, images: [e.target.value] })}
-                className="border border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
+                className="border rounded-2xl border-gray-200 px-4 py-2 focus:outline-hidden focus:border-gray-400"
               />
             </div>
 

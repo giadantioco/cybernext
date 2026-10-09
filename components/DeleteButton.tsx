@@ -31,7 +31,7 @@ export default function DeleteButton({ id, redirectTo }: DeleteButtonProps) {
   return (
     <button
       onClick={handleDelete}
-      className="inline-block rounded-sm bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-red-700"
+      className="inline-block rounded-xl bg-red-600 px-4 py-2 text-xs font-medium font-syne text-white btn-glow cursor-pointer"
     >
       {labels.btnDelete}
     </button>
