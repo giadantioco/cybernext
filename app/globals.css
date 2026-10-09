@@ -26,6 +26,35 @@
     border-radius: 50%;
     animation: l5 1s infinite linear alternate;
   }
+  /* ctas */
+  .btn-glow {
+    position: relative;
+  }
+
+  .btn-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--glow-angle),
+      transparent 80%,
+      #fff 92%,
+      transparent 100%
+    );
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  .btn-glow:hover::before {
+    opacity: 1;
+    animation: glow-spin 3s linear infinite;
+  }
 }
 
 /* utilities */
@@ -36,6 +65,7 @@
 @utility table-td {
   @apply px-2 py-2 border-b;
 }
+
 /* animations*/
 @keyframes l5 {
   0% {
@@ -61,5 +91,23 @@
       20px 0 rgb(0 61 64 / 0.13),
       -20px 0 var(--color-petrol);
     background: var(--color-petrol);
+  }
+}
+/* Lets the browser animate the angle of the gradient */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glow-spin {
+  to {
+    --glow-angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-glow:hover::before {
+    animation: none;
   }
 }

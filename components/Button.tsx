@@ -21,7 +21,7 @@ function Button({
   return (
     <Link
       href={href}
-      className={`inline-block rounded-sm px-4 py-2 text-xs font-medium text-white ${variantClasses[variant]}`}
+      className={`inline-block rounded-xl px-4 py-2 text-xs font-syne font-medium text-white btn-glow cursor-pointer ${variantClasses[variant]}`}
     >
       {label}
     </Link>
