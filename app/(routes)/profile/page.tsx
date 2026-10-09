@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import Header from "@/components/Header";
+import LogoutButton from "@/components/LogoutButton";
 
 export default async function ProfilePage() {
   const cookieStore = await cookies();
@@ -26,7 +27,7 @@ export default async function ProfilePage() {
       <Header />
       <section className="px-16 py-8">
         <h1 className="text-4xl font-bold py-8">User Profile</h1>
-        <div className="bg-white border border-gray-200 p-8 max-w-md">
+        <div className="bg-white border rounded-2xl border-gray-200 p-8 max-w-md">
           <img
             src={user.avatar}
             alt={user.name}
@@ -36,6 +37,7 @@ export default async function ProfilePage() {
           <p className="text-gray-600">{user.email}</p>
           <p className="mt-2 text-sm text-gray-400">{user.role}</p>
         </div>
+        <LogoutButton />
       </section>
     </main>
   );
