@@ -1,11 +1,12 @@
 import { IProduct } from "@/model/product";
 import ProductActions from "./ProductActions";
+import ProductImage from "./ProductImage";
 
 export default function ProductCard({ product }: { product: IProduct }) {
   return (
     <div>
       <article className="bg-white border-gray-200 border rounded-2xl">
-        <img
+        <ProductImage
           src={product.images[0]}
           alt={product.title}
           className="w-full h-48 object-cover border rounded-2xl"

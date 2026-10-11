@@ -1,7 +1,8 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import Header from "@/components/Header";
 import LogoutButton from "@/components/LogoutButton";
+import { IUser } from "@/model/user";
+import { labels } from "@/data/labels";
 
 export default async function ProfilePage() {
   const cookieStore = await cookies();
@@ -20,25 +21,39 @@ export default async function ProfilePage() {
     redirect("/login");
   }
 
-  const user = await response.json();
+  const user: IUser = await response.json();
+
+  const memberSince = new Date(user.creationAt).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
   return (
-    <main>
-      <Header />
-      <section className="px-16 py-8">
-        <h1 className="text-4xl font-bold py-8">User Profile</h1>
-        <div className="bg-white border rounded-2xl border-gray-200 p-8 max-w-md">
-          <img
-            src={user.avatar}
-            alt={user.name}
-            className="w-24 h-24 object-cover rounded-full"
-          />
-          <p className="mt-4 text-xl font-bold">{user.name}</p>
-          <p className="text-gray-600">{user.email}</p>
-          <p className="mt-2 text-sm text-gray-400">{user.role}</p>
+    <section className="flex justify-center px-4 py-8">
+      <article className="w-full max-w-md bg-white border rounded-2xl border-gray-200 p-8 flex flex-col items-center text-center gap-3">
+        {/* eslint-disable-next-line @next/next/no-img-element -- avatar comes from an external API */}
+        <img
+          src={user.avatar}
+          alt={user.name}
+          className="w-28 h-28 rounded-full object-cover border-4 border-petrol"
+        />
+
+        <h1 className="text-2xl font-bold">{user.name}</h1>
+        <p className="text-gray-600">{user.email}</p>
+
+        <span className="rounded-2xl bg-petrol p-3 text-xs font-medium uppercase tracking-wide text-white">
+          {user.role}
+        </span>
+
+        <p className="text-sm text-gray-400">
+          {labels.profileMemberSince} {memberSince}
+        </p>
+
+        <div className="mt-4">
+          <LogoutButton />
         </div>
-        <LogoutButton />
-      </section>
-    </main>
+      </article>
+    </section>
   );
 }

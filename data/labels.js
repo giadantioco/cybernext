@@ -37,6 +37,9 @@ export const labels = {
   loginEmail: "Email",
   loginPw: "Password",
 
+  // profile
+  profileMemberSince: "Member since:",
+
   // Button text
   btnView: "View",
   btnAddProduct: "Add Product",
