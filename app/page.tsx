@@ -3,6 +3,7 @@ import { labels } from "../data/labels";
 import Header from "@/components/Header";
 import ProductActions from "@/components/ProductActions";
 import ProductCard from "@/components/ProductCard";
+import ProductImage from "@/components/ProductImage";
 
 export default async function HomePage() {
   const products = await getProducts();
@@ -34,10 +35,10 @@ export default async function HomePage() {
             {products.map((product) => (
               <tr key={product.id} className="hover:bg-gray-50">
                 <td className="px-4 py-2 border-b">
-                  <img
+                  <ProductImage
                     src={product.images[0]}
                     alt={product.title}
-                    className="w-12 h-12 object-cover"
+                    className=" border rounded-2xl"
                   />
                 </td>
                 <td className="table-td">{product.id}</td>

@@ -50,6 +50,7 @@ export default function LoginPage() {
               <input
                 name="email"
                 type="email"
+                autoComplete="email"
                 placeholder="john@email.com"
                 value={form.email}
                 onChange={handleChange}
@@ -64,6 +65,7 @@ export default function LoginPage() {
               <input
                 name="password"
                 type="password"
+                autoComplete="password"
                 placeholder="**********"
                 value={form.password}
                 onChange={handleChange}

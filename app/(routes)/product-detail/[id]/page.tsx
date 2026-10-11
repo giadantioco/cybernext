@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import ProductActions from "@/components/ProductActions";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import ProductImage from "@/components/ProductImage";
 
 export async function generateMetadata(
   props: ProductDetailPageProps,
@@ -29,10 +30,10 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
         <h1 className="text-4xl font-bold pb-4">{product.title}</h1>
         <ProductActions id={product.id} showView={false} redirectTo={"/"} />
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <img
+          <ProductImage
             src={product.images[0]}
             alt={product.title}
-            className="w-full aspect-square object-cover border rounded-2xl"
+            className="w-full h-48 object-cover border rounded-2xl"
           />
           <div>
             <p className="text-lg">{product.description}</p>
