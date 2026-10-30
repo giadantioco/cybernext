@@ -2,11 +2,19 @@
 /* theme*/
 @theme {
   --font-sans: Inter, sans-serif;
+  --color-primary: #eb6d4a;
+  --color-0: #efefff;
+  --color-20: #d7dfdc;
+  --color-40: #ffe3cf;
+  --color-60: #7161a8;
+  --color-80: #e6b74b;
+  --color-100: #c94e4e;
   --color-petrol: #003d40;
 }
 /* theme's variables next/font */
 @theme inline {
   --font-syne: var(--font-syne-next), sans-serif;
+  --font-dmSans: var(--font-dm-sans);
 }
 /* base */
 @layer base {

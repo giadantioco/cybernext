@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const syne = Syne({
   subsets: ["latin"],
   variable: "--font-syne-next",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${syne.variable}`}>{children}</body>
+      <body className={`${dmSans.className} ${syne.variable}`}>{children}</body>
     </html>
   );
 }
